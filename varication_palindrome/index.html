@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function palidrome() {
+         var txt_recup = document.getElementById('txt_saisie').value;
+         // supprime les caracter speciaux et met en minuscule
+         var chaine = txt_recup.replace(/[^A-Z0-9]/ig, "").toLowerCase();
+         // comparer et inverse le chaine
+         var txt_palidrome = chaine.split('').reverse().join('');
+
+         if (chaine === txt_palidrome) {
+           alert("c'est un palindrome");
+         }else {
+           alert("ce n'est pas un palindrome");
+         }
+      }
+    </script>
+  </head>
+  <body>
+     <form >
+       <input type="text" id="txt_saisie" name="" value="">
+      <input type="submit" name="" onclick="palidrome()" value="Verification">
+      <br>
+      <br>
+    
+     </form>
+  </body>
+
+</html>
